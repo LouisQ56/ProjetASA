@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="archi" nsURI="http://www.example.org/archi" nsPrefix="archi">
+  <eClassifiers xsi:type="ecore:EClass" name="Configuration">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interface" upperBound="-1"
+        eType="#//Interface" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="component" upperBound="-1"
+        eType="#//Component" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connector" upperBound="-1"
+        eType="#//Connector" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Connector">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="glue" eType="#//Glue" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="binding" eType="#//Binding"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Interface"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Role">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachement" upperBound="-1"
+        eType="#//Attachement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inrole" lowerBound="1"
+        eType="#//InRole"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outrole" lowerBound="1"
+        eType="#//OutRole"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Port">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outport" lowerBound="1"
+        eType="#//OutPort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inport" lowerBound="1"
+        eType="#//InPort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachement" upperBound="-1"
+        eType="#//Attachement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Service">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inservice" lowerBound="1"
+        eType="#//inService"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outservice" lowerBound="1"
+        eType="#//outService"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Component">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interface" upperBound="-1"
+        eType="#//Interface" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="component" upperBound="-1"
+        eType="#//Component" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Glue"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Binding"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Attachement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InPort"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OutPort"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceConnector">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connector" eType="#//Connector"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="role" upperBound="-1" eType="#//Role"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interface" eType="#//Interface"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceComponent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="service" upperBound="-1"
+        eType="#//Service"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="port" upperBound="-1" eType="#//Port"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interface" eType="#//Interface"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InRole"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OutRole"/>
+  <eClassifiers xsi:type="ecore:EClass" name="inService"/>
+  <eClassifiers xsi:type="ecore:EClass" name="outService"/>
+</ecore:EPackage>
