@@ -30,16 +30,16 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Interface"/>
     <eClassifiers xsi:type="ecore:EClass" name="Port">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="outport" lowerBound="1"
-          eType="#//M2/OutPort"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="inport" lowerBound="1"
-          eType="#//M2/InPort"/>
+          eType="#//M2/InPort" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outport" lowerBound="1"
+          eType="#//M2/OutPort" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Service">
       <eStructuralFeatures xsi:type="ecore:EReference" name="inservice" lowerBound="1"
-          eType="#//M2/inService"/>
+          eType="#//M2/inService" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="outservice" lowerBound="1"
-          eType="#//M2/outService"/>
+          eType="#//M2/outService" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Component">
       <eStructuralFeatures xsi:type="ecore:EReference" name="interface" upperBound="-1"
@@ -73,8 +73,8 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="service" upperBound="-1"
           eType="#//M2/Service" containment="true"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="InRole" eSuperTypes="#//M2/Role"/>
-    <eClassifiers xsi:type="ecore:EClass" name="OutRole" eSuperTypes="#//M2/Role"/>
+    <eClassifiers xsi:type="ecore:EClass" name="InRole"/>
+    <eClassifiers xsi:type="ecore:EClass" name="OutRole"/>
     <eClassifiers xsi:type="ecore:EClass" name="inService">
       <eStructuralFeatures xsi:type="ecore:EReference" name="inport" eType="#//M2/InPort"/>
     </eClassifiers>
@@ -96,6 +96,11 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="outport" lowerBound="2"
           upperBound="2" eType="#//M2/OutPort" containment="true"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Role"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Role">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="inrole" lowerBound="1"
+          eType="#//M2/InRole" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outrole" lowerBound="1"
+          eType="#//M2/OutRole" containment="true"/>
+    </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>
