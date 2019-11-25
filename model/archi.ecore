@@ -15,8 +15,6 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Interface"/>
   <eClassifiers xsi:type="ecore:EClass" name="Role">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attachement" upperBound="-1"
-        eType="#//Attachement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inrole" lowerBound="1"
         eType="#//InRole"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outrole" lowerBound="1"
@@ -27,8 +25,6 @@
         eType="#//OutPort"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inport" lowerBound="1"
         eType="#//InPort"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attachement" upperBound="-1"
-        eType="#//Attachement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Service">
     <eStructuralFeatures xsi:type="ecore:EReference" name="inservice" lowerBound="1"
@@ -42,24 +38,53 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="component" upperBound="-1"
         eType="#//Component" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Glue"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Glue">
+    <eOperations name="OperationGlueInRole" lowerBound="1" eType="#//OutRole"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Binding"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Attachement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AttachementOut">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outport" lowerBound="1"
+        eType="#//OutPort" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inrole" lowerBound="1"
+        eType="#//InRole" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InPort"/>
   <eClassifiers xsi:type="ecore:EClass" name="OutPort"/>
   <eClassifiers xsi:type="ecore:EClass" name="InterfaceConnector">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="connector" eType="#//Connector"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="role" upperBound="-1" eType="#//Role"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interface" eType="#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connector" upperBound="-1"
+        eType="#//Connector" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="role" upperBound="-1" eType="#//Role"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InterfaceComponent">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="service" upperBound="-1"
-        eType="#//Service"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="port" upperBound="-1" eType="#//Port"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interface" eType="#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="port" upperBound="-1" eType="#//Port"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="service" upperBound="-1"
+        eType="#//Service" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InRole"/>
   <eClassifiers xsi:type="ecore:EClass" name="OutRole"/>
-  <eClassifiers xsi:type="ecore:EClass" name="inService"/>
-  <eClassifiers xsi:type="ecore:EClass" name="outService"/>
+  <eClassifiers xsi:type="ecore:EClass" name="inService">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inport" eType="#//InPort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="outService">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outport" lowerBound="1"
+        eType="#//OutPort" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttachementIn">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inport" lowerBound="1"
+        eType="#//InPort" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outrole" lowerBound="1"
+        eType="#//OutRole" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BindingIn" eSuperTypes="#//Binding">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inport" lowerBound="2"
+        upperBound="2" eType="#//InPort" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BindingOut" eSuperTypes="#//Binding">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outport" lowerBound="2"
+        upperBound="2" eType="#//OutPort" containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>
