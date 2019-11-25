@@ -5,73 +5,90 @@
     editorDirectory="/Archi.editor/src-gen" modelPluginID="Archi" modelName="Archi"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
-    operationReflection="true" importOrganizing="true">
+    usedGenPackages="#//archi/M1" operationReflection="true" importOrganizing="true">
   <foreignModel>archi.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Archi" disposableProviderFactory="true" ecorePackage="archi.ecore#/">
-    <genClasses ecoreClass="archi.ecore#//Configuration">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//Configuration/interface"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//Configuration/component"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//Configuration/connector"/>
-    </genClasses>
-    <genClasses ecoreClass="archi.ecore#//Connector">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//Connector/glue"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference archi.ecore#//Connector/binding"/>
-    </genClasses>
-    <genClasses ecoreClass="archi.ecore#//Interface"/>
-    <genClasses ecoreClass="archi.ecore#//Role">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference archi.ecore#//Role/inrole"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference archi.ecore#//Role/outrole"/>
-    </genClasses>
-    <genClasses ecoreClass="archi.ecore#//Port">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference archi.ecore#//Port/outport"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference archi.ecore#//Port/inport"/>
-    </genClasses>
-    <genClasses ecoreClass="archi.ecore#//Service">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference archi.ecore#//Service/inservice"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference archi.ecore#//Service/outservice"/>
-    </genClasses>
-    <genClasses ecoreClass="archi.ecore#//Component">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//Component/interface"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//Component/component"/>
-    </genClasses>
-    <genClasses ecoreClass="archi.ecore#//Glue">
-      <genOperations ecoreOperation="archi.ecore#//Glue/OperationGlueInRole"/>
-    </genClasses>
-    <genClasses ecoreClass="archi.ecore#//Binding"/>
-    <genClasses ecoreClass="archi.ecore#//AttachementOut">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//AttachementOut/outport"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//AttachementOut/inrole"/>
-    </genClasses>
-    <genClasses ecoreClass="archi.ecore#//InPort"/>
-    <genClasses ecoreClass="archi.ecore#//OutPort"/>
-    <genClasses ecoreClass="archi.ecore#//InterfaceConnector">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference archi.ecore#//InterfaceConnector/interface"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//InterfaceConnector/connector"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//InterfaceConnector/role"/>
-    </genClasses>
-    <genClasses ecoreClass="archi.ecore#//InterfaceComponent">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference archi.ecore#//InterfaceComponent/interface"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//InterfaceComponent/port"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//InterfaceComponent/service"/>
-    </genClasses>
-    <genClasses ecoreClass="archi.ecore#//InRole"/>
-    <genClasses ecoreClass="archi.ecore#//OutRole"/>
-    <genClasses ecoreClass="archi.ecore#//inService">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference archi.ecore#//inService/inport"/>
-    </genClasses>
-    <genClasses ecoreClass="archi.ecore#//outService">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//outService/outport"/>
-    </genClasses>
-    <genClasses ecoreClass="archi.ecore#//AttachementIn">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//AttachementIn/inport"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//AttachementIn/outrole"/>
-    </genClasses>
-    <genClasses ecoreClass="archi.ecore#//BindingIn">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//BindingIn/inport"/>
-    </genClasses>
-    <genClasses ecoreClass="archi.ecore#//BindingOut">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//BindingOut/outport"/>
-    </genClasses>
+    <nestedGenPackages prefix="M1" disposableProviderFactory="true" ecorePackage="archi.ecore#//M1">
+      <genClasses ecoreClass="archi.ecore#//M1/Client"/>
+      <genClasses ecoreClass="archi.ecore#//M1/Server"/>
+      <genClasses ecoreClass="archi.ecore#//M1/ClientSendRequest"/>
+      <genClasses ecoreClass="archi.ecore#//M1/ServerReceiveRequest"/>
+      <genClasses ecoreClass="archi.ecore#//M1/RPC">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M1/RPC/called"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M1/RPC/caller"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M1/Called"/>
+      <genClasses ecoreClass="archi.ecore#//M1/Caller"/>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="M2" disposableProviderFactory="true" ecorePackage="archi.ecore#//M2">
+      <genClasses ecoreClass="archi.ecore#//M2/Configuration">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/Configuration/interface"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/Configuration/component"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/Configuration/connector"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M2/Connector">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/Connector/glue"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M2/Interface"/>
+      <genClasses ecoreClass="archi.ecore#//M2/Port">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M2/Port/outport"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M2/Port/inport"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M2/Service">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M2/Service/inservice"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M2/Service/outservice"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M2/Component">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/Component/interface"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/Component/component"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M2/Glue">
+        <genOperations ecoreOperation="archi.ecore#//M2/Glue/OperationGlueInRole"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M2/Binding"/>
+      <genClasses ecoreClass="archi.ecore#//M2/AttachementOut">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/AttachementOut/outport"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/AttachementOut/inrole"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M2/InPort"/>
+      <genClasses ecoreClass="archi.ecore#//M2/OutPort"/>
+      <genClasses ecoreClass="archi.ecore#//M2/InterfaceConnector">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M2/InterfaceConnector/interface"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/InterfaceConnector/connector"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/InterfaceConnector/role"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M2/InterfaceComponent">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M2/InterfaceComponent/interface"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/InterfaceComponent/port"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/InterfaceComponent/service"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M2/InRole"/>
+      <genClasses ecoreClass="archi.ecore#//M2/OutRole"/>
+      <genClasses ecoreClass="archi.ecore#//M2/inService">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M2/inService/inport"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M2/outService">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/outService/outport"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M2/AttachementIn">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/AttachementIn/inport"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/AttachementIn/outrole"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M2/BindingIn">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/BindingIn/inport"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M2/BindingOut">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/BindingOut/outport"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M2/Role"/>
+    </nestedGenPackages>
   </genPackages>
 </genmodel:GenModel>

@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="archi" nsURI="http://www.example.org/archi" nsPrefix="archi">
-  <eSubpackages name="M1"/>
+  <eSubpackages name="M1">
+    <eClassifiers xsi:type="ecore:EClass" name="Client" eSuperTypes="#//M2/Component"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Server" eSuperTypes="#//M2/Component"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ClientSendRequest" eSuperTypes="#//M2/OutPort"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ServerReceiveRequest" eSuperTypes="#//M2/InPort"/>
+    <eClassifiers xsi:type="ecore:EClass" name="RPC" eSuperTypes="#//M2/Connector">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="called" upperBound="-1"
+          eType="#//M1/Called" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="caller" upperBound="-1"
+          eType="#//M1/Caller" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Called" eSuperTypes="#//M2/InRole"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Caller" eSuperTypes="#//M2/OutRole"/>
+  </eSubpackages>
   <eSubpackages name="M2">
     <eClassifiers xsi:type="ecore:EClass" name="Configuration">
       <eStructuralFeatures xsi:type="ecore:EReference" name="interface" upperBound="-1"
@@ -14,15 +27,8 @@
     <eClassifiers xsi:type="ecore:EClass" name="Connector">
       <eStructuralFeatures xsi:type="ecore:EReference" name="glue" eType="#//M2/Glue"
           containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="binding" eType="#//M2/Binding"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Interface"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Role">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="inrole" lowerBound="1"
-          eType="#//M2/InRole"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="outrole" lowerBound="1"
-          eType="#//M2/OutRole"/>
-    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Port">
       <eStructuralFeatures xsi:type="ecore:EReference" name="outport" lowerBound="1"
           eType="#//M2/OutPort"/>
@@ -44,7 +50,7 @@
     <eClassifiers xsi:type="ecore:EClass" name="Glue">
       <eOperations name="OperationGlueInRole" lowerBound="1" eType="#//M2/OutRole"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Binding"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Binding" eSuperTypes="#//M2/Connector"/>
     <eClassifiers xsi:type="ecore:EClass" name="AttachementOut">
       <eStructuralFeatures xsi:type="ecore:EReference" name="outport" lowerBound="1"
           eType="#//M2/OutPort" containment="true"/>
@@ -67,8 +73,8 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="service" upperBound="-1"
           eType="#//M2/Service" containment="true"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="InRole"/>
-    <eClassifiers xsi:type="ecore:EClass" name="OutRole"/>
+    <eClassifiers xsi:type="ecore:EClass" name="InRole" eSuperTypes="#//M2/Role"/>
+    <eClassifiers xsi:type="ecore:EClass" name="OutRole" eSuperTypes="#//M2/Role"/>
     <eClassifiers xsi:type="ecore:EClass" name="inService">
       <eStructuralFeatures xsi:type="ecore:EReference" name="inport" eType="#//M2/InPort"/>
     </eClassifiers>
@@ -90,5 +96,6 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="outport" lowerBound="2"
           upperBound="2" eType="#//M2/OutPort" containment="true"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Role"/>
   </eSubpackages>
 </ecore:EPackage>
