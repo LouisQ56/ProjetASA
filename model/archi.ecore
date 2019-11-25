@@ -59,15 +59,13 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="InPort"/>
     <eClassifiers xsi:type="ecore:EClass" name="OutPort"/>
-    <eClassifiers xsi:type="ecore:EClass" name="InterfaceConnector">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="interface" eType="#//M2/Interface"/>
+    <eClassifiers xsi:type="ecore:EClass" name="InterfaceConnector" eSuperTypes="#//M2/Interface">
       <eStructuralFeatures xsi:type="ecore:EReference" name="connector" upperBound="-1"
           eType="#//M2/Connector" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="role" upperBound="-1"
           eType="#//M2/Role" containment="true"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="InterfaceComponent">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="interface" eType="#//M2/Interface"/>
+    <eClassifiers xsi:type="ecore:EClass" name="InterfaceComponent" eSuperTypes="#//M2/Interface">
       <eStructuralFeatures xsi:type="ecore:EReference" name="port" upperBound="-1"
           eType="#//M2/Port" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="service" upperBound="-1"

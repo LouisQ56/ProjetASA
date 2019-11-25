@@ -54,14 +54,10 @@
       <genClasses ecoreClass="archi.ecore#//M2/InPort"/>
       <genClasses ecoreClass="archi.ecore#//M2/OutPort"/>
       <genClasses ecoreClass="archi.ecore#//M2/InterfaceConnector">
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference archi.ecore#//M2/InterfaceConnector/interface"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/InterfaceConnector/connector"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/InterfaceConnector/role"/>
       </genClasses>
       <genClasses ecoreClass="archi.ecore#//M2/InterfaceComponent">
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference archi.ecore#//M2/InterfaceComponent/interface"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/InterfaceComponent/port"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/InterfaceComponent/service"/>
       </genClasses>
