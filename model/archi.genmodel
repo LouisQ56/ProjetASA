@@ -13,13 +13,131 @@
       <genClasses ecoreClass="archi.ecore#//M1/Client"/>
       <genClasses ecoreClass="archi.ecore#//M1/Server"/>
       <genClasses ecoreClass="archi.ecore#//M1/ClientSendRequest"/>
-      <genClasses ecoreClass="archi.ecore#//M1/ServerReceiveRequest"/>
       <genClasses ecoreClass="archi.ecore#//M1/RPC">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M1/RPC/called"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M1/RPC/caller"/>
       </genClasses>
       <genClasses ecoreClass="archi.ecore#//M1/Called"/>
       <genClasses ecoreClass="archi.ecore#//M1/Caller"/>
+      <genClasses ecoreClass="archi.ecore#//M1/RPCtoExternalSocket">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M1/RPCtoExternalSocket/rpc"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M1/ExternalSocket"/>
+      <genClasses ecoreClass="archi.ecore#//M1/Connection_Manager">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M1/Connection_Manager/externalsocket"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M1/Connection_Manager/db_query"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M1/Connection_Manager/security_check"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M1/DB_Query">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M1/DB_Query/port"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M1/security_check">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M1/security_check/port"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M1/Security_manager">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M1/Security_manager/security_auth"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M1/Security_manager/check_query"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M1/security_auth">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M1/security_auth/port"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M1/check_query">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M1/check_query/port"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M1/Database">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M1/Database/query_interrogation"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M1/Database/security_management"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M1/security_management">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M1/security_management/port"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M1/query_interrogation">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M1/query_interrogation/port"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M1/CManagerToDatabase">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M1/CManagerToDatabase/rolequery_interrogation"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M1/CManagerToDatabase/roledb_query"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M1/CManagerToDatabase/connector"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M1/AttachQuery_Interrogation">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M1/AttachQuery_Interrogation/rolequery_interrogation"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M1/AttachQuery_Interrogation/query_interrogation"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M1/RoleQuery_Interrogation">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M1/RoleQuery_Interrogation/role"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M1/RoleDB_Query">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M1/RoleDB_Query/role"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M1/AttachDB_Query">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M1/AttachDB_Query/roledb_query"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M1/AttachDB_Query/db_query"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M1/CManagerToSManager">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M1/CManagerToSManager/connector"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M1/CManagerToSManager/rolesecurity_auth"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M1/CManagerToSManager/rolesecurity_check"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M1/RoleSecurity_Check">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M1/RoleSecurity_Check/role"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M1/RoleSecurity_auth">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M1/RoleSecurity_auth/role"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M1/AttachSecurity_auth">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M1/AttachSecurity_auth/security_auth"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M1/AttachSecurity_auth/rolesecurity_auth"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M1/AttachSecurity_check">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M1/AttachSecurity_check/rolesecurity_check"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M1/AttachSecurity_check/security_check"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M1/SManagerToDatabase">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M1/SManagerToDatabase/connector"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M1/SManagerToDatabase/rolecheck_query"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M1/SManagerToDatabase/rolesecurity_management"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M1/RoleCheck_Query">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M1/RoleCheck_Query/role"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M1/AttachRoleQuery">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M1/AttachRoleQuery/check_query"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M1/AttachRoleQuery/rolecheck_query"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M1/RoleSecurity_management">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M1/RoleSecurity_management/role"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M1/AttachSecurity_management">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M1/AttachSecurity_management/rolesecurity_management"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M1/AttachSecurity_management/security_management"/>
+      </genClasses>
     </nestedGenPackages>
     <nestedGenPackages prefix="M2" disposableProviderFactory="true" ecorePackage="archi.ecore#//M2">
       <genClasses ecoreClass="archi.ecore#//M2/Configuration">
