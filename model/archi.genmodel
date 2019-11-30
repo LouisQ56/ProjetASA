@@ -334,15 +334,30 @@
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference archi.ecore#//NewM1/Security_Management_to_Check_Query_Attachement/cq_role"/>
       </genClasses>
-      <genClasses ecoreClass="archi.ecore#//NewM1/Check_Query_to_Security_Management_Attachement"/>
-      <genClasses ecoreClass="archi.ecore#//NewM1/Query_Interogation_to_Connect_Manager_Attachement"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Check_Query_to_Security_Management_Attachement">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//NewM1/Check_Query_to_Security_Management_Attachement/security_management_role"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//NewM1/Check_Query_to_Security_Management_Attachement/check_query_port"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Query_Interogation_to_Connect_Manager_Attachement">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//NewM1/Query_Interogation_to_Connect_Manager_Attachement/query_interrogation_role"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//NewM1/Query_Interogation_to_Connect_Manager_Attachement/db_query_port"/>
+      </genClasses>
       <genClasses ecoreClass="archi.ecore#//NewM1/Connect_Manager_to_Query_Interogation_Attachement">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference archi.ecore#//NewM1/Connect_Manager_to_Query_Interogation_Attachement/query_interrogation_port"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference archi.ecore#//NewM1/Connect_Manager_to_Query_Interogation_Attachement/db_role"/>
       </genClasses>
-      <genClasses ecoreClass="archi.ecore#//NewM1/Security_Authentification_to_Security_Check_Attachement"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Security_Authentification_to_Security_Check_Attachement">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//NewM1/Security_Authentification_to_Security_Check_Attachement/security_autentification_port"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//NewM1/Security_Authentification_to_Security_Check_Attachement/security_check_role"/>
+      </genClasses>
       <genClasses ecoreClass="archi.ecore#//NewM1/Security_Check_to_Security_Authentification_Attachement">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference archi.ecore#//NewM1/Security_Check_to_Security_Authentification_Attachement/security_check_port"/>

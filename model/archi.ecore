@@ -358,14 +358,27 @@
           eType="#//NewM1/Security_Management_Port"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="cq_role" eType="#//NewM1/Check_Query_role"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Check_Query_to_Security_Management_Attachement"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Query_Interogation_to_Connect_Manager_Attachement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Check_Query_to_Security_Management_Attachement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="security_management_role"
+          eType="#//NewM1/Security_Management_role"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="check_query_port" eType="#//NewM1/Check_Query_Port"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Query_Interogation_to_Connect_Manager_Attachement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="query_interrogation_role"
+          eType="#//NewM1/Query_Interrogation_role"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="db_query_port" eType="#//NewM1/DB_Query_Port"/>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Connect_Manager_to_Query_Interogation_Attachement">
       <eStructuralFeatures xsi:type="ecore:EReference" name="query_interrogation_port"
           eType="#//NewM1/Query_Interrogation_Port"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="db_role" eType="#//NewM1/DB_Query_role"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Security_Authentification_to_Security_Check_Attachement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Security_Authentification_to_Security_Check_Attachement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="security_autentification_port"
+          eType="#//NewM1/Security_Autentification_Port"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="security_check_role"
+          eType="#//NewM1/Security_Check_role"/>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Security_Check_to_Security_Authentification_Attachement">
       <eStructuralFeatures xsi:type="ecore:EReference" name="security_check_port"
           eType="#//NewM1/Security_Check_Port"/>
