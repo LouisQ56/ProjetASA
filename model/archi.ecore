@@ -133,16 +133,16 @@
     <eClassifiers xsi:type="ecore:EClass" name="Configuration">
       <eStructuralFeatures xsi:type="ecore:EReference" name="interface" upperBound="-1"
           eType="#//M2/Interface" containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="component" upperBound="-1"
-          eType="#//M2/Component" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="connector" upperBound="-1"
           eType="#//M2/Connector" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="component" upperBound="-1"
+          eType="#//M2/Component" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Connector">
       <eStructuralFeatures xsi:type="ecore:EReference" name="glue" eType="#//M2/Glue"
           containment="true"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Interface"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Interface" abstract="true"/>
     <eClassifiers xsi:type="ecore:EClass" name="Port">
       <eStructuralFeatures xsi:type="ecore:EReference" name="inport" lowerBound="1"
           eType="#//M2/InPort" containment="true"/>
@@ -167,9 +167,9 @@
     <eClassifiers xsi:type="ecore:EClass" name="Binding" eSuperTypes="#//M2/Connector"/>
     <eClassifiers xsi:type="ecore:EClass" name="AttachementOut">
       <eStructuralFeatures xsi:type="ecore:EReference" name="outport" lowerBound="1"
-          eType="#//M2/OutPort" containment="true"/>
+          eType="#//M2/OutPort"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="inrole" lowerBound="1"
-          eType="#//M2/InRole" containment="true"/>
+          eType="#//M2/InRole"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="InPort"/>
     <eClassifiers xsi:type="ecore:EClass" name="OutPort"/>
@@ -191,22 +191,19 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="inport" eType="#//M2/InPort"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="outService">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="outport" lowerBound="1"
-          eType="#//M2/OutPort" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outport" eType="#//M2/OutPort"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="AttachementIn">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="inport" lowerBound="1"
-          eType="#//M2/InPort" containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="outrole" lowerBound="1"
-          eType="#//M2/OutRole" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="inport" eType="#//M2/InPort"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outrole" eType="#//M2/OutRole"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="BindingIn" eSuperTypes="#//M2/Binding">
       <eStructuralFeatures xsi:type="ecore:EReference" name="inport" lowerBound="2"
-          upperBound="2" eType="#//M2/InPort" containment="true"/>
+          upperBound="2" eType="#//M2/InPort"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="BindingOut" eSuperTypes="#//M2/Binding">
       <eStructuralFeatures xsi:type="ecore:EReference" name="outport" lowerBound="2"
-          upperBound="2" eType="#//M2/OutPort" containment="true"/>
+          upperBound="2" eType="#//M2/OutPort"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Role">
       <eStructuralFeatures xsi:type="ecore:EReference" name="inrole" lowerBound="1"
@@ -214,5 +211,193 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="outrole" lowerBound="1"
           eType="#//M2/OutRole" containment="true"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Attachement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="attachementout" upperBound="-1"
+          eType="#//M2/AttachementOut" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="attachementin" upperBound="-1"
+          eType="#//M2/AttachementIn" containment="true"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="otherM1">
+    <eClassifiers xsi:type="ecore:EClass" name="Client" eSuperTypes="#//M1/Client">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sendrequest" upperBound="-1"
+          eType="#//otherM1/SendRequest_Port" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Server" eSuperTypes="#//M1/Server">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="receiverequest" upperBound="-1"
+          eType="#//otherM1/ReceiveRequest_Port" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ClientServerConfiguration" eSuperTypes="#//M2/Configuration">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="Client" lowerBound="1"
+          eType="#//otherM1/Client" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="Server" lowerBound="1"
+          eType="#//otherM1/Server" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SendRequest_Port" eSuperTypes="#//M2/OutPort"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ReceiveRequest_Port" eSuperTypes="#//M2/InPort"/>
+    <eClassifiers xsi:type="ecore:EClass" name="RPC_Connector" eSuperTypes="#//M2/Connector #//M2/Role">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="caller_role" lowerBound="1"
+          eType="#//otherM1/Caller_Role"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="called_role" lowerBound="1"
+          eType="#//otherM1/Called_Role"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Called_Role"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Caller_Role"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ReceiveRequest_to_called_Attachement"
+        eSuperTypes="#//M2/AttachementIn">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="receiverequest_port"
+          lowerBound="1" eType="#//otherM1/ReceiveRequest_Port"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="called_role" lowerBound="1"
+          eType="#//otherM1/Called_Role"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SendRequest_to_Caller_Attachement"
+        eSuperTypes="#//M2/AttachementOut">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sendrequest_port" lowerBound="1"
+          eType="#//otherM1/SendRequest_Port"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="caller_role" lowerBound="1"
+          eType="#//otherM1/Caller_Role"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="NewM1">
+    <eClassifiers xsi:type="ecore:EClass" name="ClientServerConfiguration" eSuperTypes="#//M2/Configuration">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="server" upperBound="-1"
+          eType="#//NewM1/Server" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="client" upperBound="-1"
+          eType="#//NewM1/Client" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SendRequest_Port" eSuperTypes="#//M2/OutPort"/>
+    <eClassifiers xsi:type="ecore:EClass" name="RPC_Connector">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="caller_role" lowerBound="1"
+          eType="#//NewM1/Caller_Role"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="called_role" lowerBound="1"
+          eType="#//NewM1/Called_Role"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Called_Role">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="receiverequest_to_called_attachement"
+          eType="#//NewM1/ReceiveRequest_to_called_Attachement"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Caller_Role"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ReceiveRequest_to_called_Attachement"
+        eSuperTypes="#//M2/AttachementIn">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="serv_port" eType="#//NewM1/serv_Port"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SendRequest_to_Caller_Atatchement"
+        eSuperTypes="#//M2/AttachementOut">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sendrequest_port" lowerBound="1"
+          eType="#//NewM1/SendRequest_Port"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="caller_role" eType="#//NewM1/Caller_Role"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Connection_Manager_composant">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="external_socket_port"
+          upperBound="-1" eType="#//NewM1/External_Socket_Port" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="security_check_port"
+          upperBound="-1" eType="#//NewM1/Security_Check_Port" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="db_query_port" upperBound="-1"
+          eType="#//NewM1/DB_Query_Port" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Security_Check_Port"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DB_Query_Port"/>
+    <eClassifiers xsi:type="ecore:EClass" name="External_Socket_Port"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Security_Manager_composant">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="security_autentification_port"
+          upperBound="-1" eType="#//NewM1/Security_Autentification_Port" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="check_query_port" upperBound="-1"
+          eType="#//NewM1/Check_Query_Port" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Security_Autentification_Port"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Check_Query_Port"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Database_composant">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="neweclass19" upperBound="-1"
+          eType="#//NewM1/Query_Interrogation_Port" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="neweclass20" upperBound="-1"
+          eType="#//NewM1/Security_Management_Port" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Query_Interrogation_Port"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Security_Management_Port"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Security_Management_role"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Query_Interrogation_role"/>
+    <eClassifiers xsi:type="ecore:EClass" name="NewEClass25"/>
+    <eClassifiers xsi:type="ecore:EClass" name="NewEClass24"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Security_Check_role"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DB_Query_role"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Security_Autentification_role"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Check_Query_role"/>
+    <eClassifiers xsi:type="ecore:EClass" name="CQ_role"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SA_role"/>
+    <eClassifiers xsi:type="ecore:EClass" name="QI_role"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SM_role"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DB_role"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SC_role"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Co_to_Se_Connector">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sm_role" upperBound="-1"
+          eType="#//NewM1/Security_Management_role" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Se_to_Db_Connector">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="qi_role" upperBound="-1"
+          eType="#//NewM1/Query_Interrogation_role" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Connector">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sc_role" upperBound="-1"
+          eType="#//NewM1/Security_Check_role" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Connector">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="db_role" upperBound="-1"
+          eType="#//NewM1/DB_Query_role" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Connector">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sa_role" upperBound="-1"
+          eType="#//NewM1/Security_Autentification_role" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Connector">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="cq_role" upperBound="-1"
+          eType="#//NewM1/Check_Query_role" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Security_Management_to_Check_Query_Attachement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="security_management_port"
+          eType="#//NewM1/Security_Management_Port"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="cq_role" eType="#//NewM1/Check_Query_role"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Check_Query_to_Security_Management_Attachement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Query_Interogation_to_Connect_Manager_Attachement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Connect_Manager_to_Query_Interogation_Attachement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="query_interrogation_port"
+          eType="#//NewM1/Query_Interrogation_Port"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="db_role" eType="#//NewM1/DB_Query_role"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Security_Authentification_to_Security_Check_Attachement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Security_Check_to_Security_Authentification_Attachement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="security_check_port"
+          eType="#//NewM1/Security_Check_Port"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sa_role" eType="#//NewM1/Security_Autentification_role"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Server" eSuperTypes="#//M2/Component">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="database_composant" upperBound="-1"
+          eType="#//NewM1/Database_composant" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="connection_manager_composant"
+          upperBound="-1" eType="#//NewM1/Connection_Manager_composant" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="security_manager_composant"
+          upperBound="-1" eType="#//NewM1/Security_Manager_composant" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="neweclass48" upperBound="-1"
+          eType="#//NewM1/serv_Port" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="serv_Port"/>
+    <eClassifiers xsi:type="ecore:EClass" name="server_Binding">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="serv_port" eType="#//NewM1/serv_Port"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="external_socket_port"
+          eType="#//NewM1/External_Socket_Port"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Client" eSuperTypes="#//M2/Component">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sendrequest_port" upperBound="-1"
+          eType="#//NewM1/SendRequest_Port" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="RPC_Connector">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="caller_role" lowerBound="1"
+          eType="#//NewM1/Caller_Role.1"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="called_role" lowerBound="1"
+          eType="#//NewM1/Called_Role.1"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Caller_Role"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Called_Role"/>
   </eSubpackages>
 </ecore:EPackage>

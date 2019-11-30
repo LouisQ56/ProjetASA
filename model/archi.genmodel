@@ -142,8 +142,8 @@
     <nestedGenPackages prefix="M2" disposableProviderFactory="true" ecorePackage="archi.ecore#//M2">
       <genClasses ecoreClass="archi.ecore#//M2/Configuration">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/Configuration/interface"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/Configuration/component"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/Configuration/connector"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/Configuration/component"/>
       </genClasses>
       <genClasses ecoreClass="archi.ecore#//M2/Connector">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/Connector/glue"/>
@@ -166,8 +166,10 @@
       </genClasses>
       <genClasses ecoreClass="archi.ecore#//M2/Binding"/>
       <genClasses ecoreClass="archi.ecore#//M2/AttachementOut">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/AttachementOut/outport"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/AttachementOut/inrole"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M2/AttachementOut/outport"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M2/AttachementOut/inrole"/>
       </genClasses>
       <genClasses ecoreClass="archi.ecore#//M2/InPort"/>
       <genClasses ecoreClass="archi.ecore#//M2/OutPort"/>
@@ -186,22 +188,191 @@
             ecoreFeature="ecore:EReference archi.ecore#//M2/inService/inport"/>
       </genClasses>
       <genClasses ecoreClass="archi.ecore#//M2/outService">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/outService/outport"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M2/outService/outport"/>
       </genClasses>
       <genClasses ecoreClass="archi.ecore#//M2/AttachementIn">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/AttachementIn/inport"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/AttachementIn/outrole"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M2/AttachementIn/inport"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M2/AttachementIn/outrole"/>
       </genClasses>
       <genClasses ecoreClass="archi.ecore#//M2/BindingIn">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/BindingIn/inport"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M2/BindingIn/inport"/>
       </genClasses>
       <genClasses ecoreClass="archi.ecore#//M2/BindingOut">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/BindingOut/outport"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//M2/BindingOut/outport"/>
       </genClasses>
       <genClasses ecoreClass="archi.ecore#//M2/Role">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/Role/inrole"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/Role/outrole"/>
       </genClasses>
+      <genClasses ecoreClass="archi.ecore#//M2/%"/>
+      <genClasses ecoreClass="archi.ecore#//M2/Attachement">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/Attachement/attachementout"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//M2/Attachement/attachementin"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="OtherM1" disposableProviderFactory="true" ecorePackage="archi.ecore#//otherM1">
+      <genClasses ecoreClass="archi.ecore#//otherM1/Client">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//otherM1/Client/sendrequest"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//otherM1/Server">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//otherM1/Server/receiverequest"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//otherM1/ClientServerConfiguration">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//otherM1/ClientServerConfiguration/Client"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//otherM1/ClientServerConfiguration/Server"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//otherM1/SendRequest_Port"/>
+      <genClasses ecoreClass="archi.ecore#//otherM1/ReceiveRequest_Port"/>
+      <genClasses ecoreClass="archi.ecore#//otherM1/RPC_Connector">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//otherM1/RPC_Connector/caller_role"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//otherM1/RPC_Connector/called_role"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//otherM1/Called_Role"/>
+      <genClasses ecoreClass="archi.ecore#//otherM1/Caller_Role"/>
+      <genClasses ecoreClass="archi.ecore#//otherM1/ReceiveRequest_to_called_Attachement">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//otherM1/ReceiveRequest_to_called_Attachement/receiverequest_port"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//otherM1/ReceiveRequest_to_called_Attachement/called_role"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//otherM1/SendRequest_to_Caller_Attachement">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//otherM1/SendRequest_to_Caller_Attachement/sendrequest_port"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//otherM1/SendRequest_to_Caller_Attachement/caller_role"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="NewM1" disposableProviderFactory="true" ecorePackage="archi.ecore#//NewM1">
+      <genClasses ecoreClass="archi.ecore#//NewM1/ClientServerConfiguration">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//NewM1/ClientServerConfiguration/server"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//NewM1/ClientServerConfiguration/client"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//NewM1/SendRequest_Port"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/RPC_Connector">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//NewM1/RPC_Connector/caller_role"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//NewM1/RPC_Connector/called_role"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Called_Role">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//NewM1/Called_Role/receiverequest_to_called_attachement"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Caller_Role"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/ReceiveRequest_to_called_Attachement">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//NewM1/ReceiveRequest_to_called_Attachement/serv_port"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//NewM1/SendRequest_to_Caller_Atatchement">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//NewM1/SendRequest_to_Caller_Atatchement/sendrequest_port"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//NewM1/SendRequest_to_Caller_Atatchement/caller_role"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Connection_Manager_composant">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//NewM1/Connection_Manager_composant/external_socket_port"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//NewM1/Connection_Manager_composant/security_check_port"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//NewM1/Connection_Manager_composant/db_query_port"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Security_Check_Port"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/DB_Query_Port"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/External_Socket_Port"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Security_Manager_composant">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//NewM1/Security_Manager_composant/security_autentification_port"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//NewM1/Security_Manager_composant/check_query_port"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Security_Autentification_Port"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Check_Query_Port"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Database_composant">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//NewM1/Database_composant/neweclass19"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//NewM1/Database_composant/neweclass20"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Query_Interrogation_Port"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Security_Management_Port"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Security_Management_role"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Query_Interrogation_role"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/NewEClass25"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/NewEClass24"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Security_Check_role"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/DB_Query_role"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Security_Autentification_role"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Check_Query_role"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/CQ_role"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/SA_role"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/QI_role"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/SM_role"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/DB_role"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/SC_role"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Co_to_Se_Connector">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//NewM1/Co_to_Se_Connector/sm_role"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Se_to_Db_Connector">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//NewM1/Se_to_Db_Connector/qi_role"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Connector">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//NewM1/Connector/sc_role"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Connector.1">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//NewM1/Connector.1/db_role"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Connector.2">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//NewM1/Connector.2/sa_role"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Connector.3">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//NewM1/Connector.3/cq_role"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Security_Management_to_Check_Query_Attachement">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//NewM1/Security_Management_to_Check_Query_Attachement/security_management_port"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//NewM1/Security_Management_to_Check_Query_Attachement/cq_role"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Check_Query_to_Security_Management_Attachement"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Query_Interogation_to_Connect_Manager_Attachement"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Connect_Manager_to_Query_Interogation_Attachement">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//NewM1/Connect_Manager_to_Query_Interogation_Attachement/query_interrogation_port"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//NewM1/Connect_Manager_to_Query_Interogation_Attachement/db_role"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Security_Authentification_to_Security_Check_Attachement"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Security_Check_to_Security_Authentification_Attachement">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//NewM1/Security_Check_to_Security_Authentification_Attachement/security_check_port"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//NewM1/Security_Check_to_Security_Authentification_Attachement/sa_role"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Server">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//NewM1/Server/database_composant"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//NewM1/Server/connection_manager_composant"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//NewM1/Server/security_manager_composant"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//NewM1/Server/neweclass48"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//NewM1/serv_Port"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/server_Binding">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//NewM1/server_Binding/serv_port"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//NewM1/server_Binding/external_socket_port"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Client">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//NewM1/Client/sendrequest_port"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//NewM1/RPC_Connector.1">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//NewM1/RPC_Connector.1/caller_role"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference archi.ecore#//NewM1/RPC_Connector.1/called_role"/>
+      </genClasses>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Caller_Role.1"/>
+      <genClasses ecoreClass="archi.ecore#//NewM1/Called_Role.1"/>
     </nestedGenPackages>
   </genPackages>
 </genmodel:GenModel>
