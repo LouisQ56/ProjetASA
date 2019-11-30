@@ -283,7 +283,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="serv_port" lowerBound="1"
           eType="#//NewM1/serv_Port"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="SendRequest_to_Caller_Atatchement"
+    <eClassifiers xsi:type="ecore:EClass" name="SendRequest_to_Caller_Attachement"
         eSuperTypes="#//M2/AttachementOut">
       <eStructuralFeatures xsi:type="ecore:EReference" name="sendrequest_port" lowerBound="1"
           eType="#//NewM1/SendRequest_Port"/>
@@ -333,27 +333,27 @@
     <eClassifiers xsi:type="ecore:EClass" name="SC_role"/>
     <eClassifiers xsi:type="ecore:EClass" name="Co_to_Se_Connector">
       <eStructuralFeatures xsi:type="ecore:EReference" name="sm_role" lowerBound="1"
-          upperBound="-1" eType="#//NewM1/Security_Management_role" containment="true"/>
+          eType="#//NewM1/Security_Management_role" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Se_to_Db_Connector">
       <eStructuralFeatures xsi:type="ecore:EReference" name="qi_role" lowerBound="1"
-          upperBound="-1" eType="#//NewM1/Query_Interrogation_role" containment="true"/>
+          eType="#//NewM1/Query_Interrogation_role" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Connector">
       <eStructuralFeatures xsi:type="ecore:EReference" name="sc_role" lowerBound="1"
-          upperBound="-1" eType="#//NewM1/Security_Check_role" containment="true"/>
+          eType="#//NewM1/Security_Check_role" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Connector">
       <eStructuralFeatures xsi:type="ecore:EReference" name="db_role" lowerBound="1"
-          upperBound="-1" eType="#//NewM1/DB_Query_role" containment="true"/>
+          eType="#//NewM1/DB_Query_role" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Connector">
       <eStructuralFeatures xsi:type="ecore:EReference" name="sa_role" lowerBound="1"
-          upperBound="-1" eType="#//NewM1/Security_Autentification_role" containment="true"/>
+          eType="#//NewM1/Security_Autentification_role" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Connector">
       <eStructuralFeatures xsi:type="ecore:EReference" name="cq_role" lowerBound="1"
-          upperBound="-1" eType="#//NewM1/Check_Query_role" containment="true"/>
+          eType="#//NewM1/Check_Query_role" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Security_Management_to_Check_Query_Attachement">
       <eStructuralFeatures xsi:type="ecore:EReference" name="security_management_port"

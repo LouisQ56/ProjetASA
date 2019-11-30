@@ -270,11 +270,11 @@
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference archi.ecore#//NewM1/ReceiveRequest_to_called_Attachement/serv_port"/>
       </genClasses>
-      <genClasses ecoreClass="archi.ecore#//NewM1/SendRequest_to_Caller_Atatchement">
+      <genClasses ecoreClass="archi.ecore#//NewM1/SendRequest_to_Caller_Attachement">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference archi.ecore#//NewM1/SendRequest_to_Caller_Atatchement/sendrequest_port"/>
+            ecoreFeature="ecore:EReference archi.ecore#//NewM1/SendRequest_to_Caller_Attachement/sendrequest_port"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference archi.ecore#//NewM1/SendRequest_to_Caller_Atatchement/caller_role"/>
+            ecoreFeature="ecore:EReference archi.ecore#//NewM1/SendRequest_to_Caller_Attachement/caller_role"/>
       </genClasses>
       <genClasses ecoreClass="archi.ecore#//NewM1/Connection_Manager_composant">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference archi.ecore#//NewM1/Connection_Manager_composant/external_socket_port"/>

@@ -9831,9 +9831,9 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_-vIKYBNxEeq6N7pvDrdGwQ" name="SendRequest_to_Caller_Atatchement" tooltipText="" outgoingEdges="_-vldZhNxEeq6N7pvDrdGwQ _06f3hhOFEeq6N7pvDrdGwQ" width="12" height="10">
-      <target xmi:type="ecore:EClass" href="archi.ecore#//NewM1/SendRequest_to_Caller_Atatchement"/>
-      <semanticElements xmi:type="ecore:EClass" href="archi.ecore#//NewM1/SendRequest_to_Caller_Atatchement"/>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_-vIKYBNxEeq6N7pvDrdGwQ" name="SendRequest_to_Caller_Attachement" tooltipText="" outgoingEdges="_-vldZhNxEeq6N7pvDrdGwQ _06f3hhOFEeq6N7pvDrdGwQ" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="archi.ecore#//NewM1/SendRequest_to_Caller_Attachement"/>
+      <semanticElements xmi:type="ecore:EClass" href="archi.ecore#//NewM1/SendRequest_to_Caller_Attachement"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -9887,8 +9887,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_-vldZhNxEeq6N7pvDrdGwQ" name="[1..1] sendrequest_port" sourceNode="_-vIKYBNxEeq6N7pvDrdGwQ" targetNode="_-vBcsBNxEeq6N7pvDrdGwQ">
-      <target xmi:type="ecore:EReference" href="archi.ecore#//NewM1/SendRequest_to_Caller_Atatchement/sendrequest_port"/>
-      <semanticElements xmi:type="ecore:EReference" href="archi.ecore#//NewM1/SendRequest_to_Caller_Atatchement/sendrequest_port"/>
+      <target xmi:type="ecore:EReference" href="archi.ecore#//NewM1/SendRequest_to_Caller_Attachement/sendrequest_port"/>
+      <semanticElements xmi:type="ecore:EReference" href="archi.ecore#//NewM1/SendRequest_to_Caller_Attachement/sendrequest_port"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_-vmEcBNxEeq6N7pvDrdGwQ" description="_-vhzABNxEeq6N7pvDrdGwQ" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_-vmEchNxEeq6N7pvDrdGwQ" showIcon="false">
           <customFeatures>labelSize</customFeatures>
@@ -10219,7 +10219,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_ceTdMhN_Eeq6N7pvDrdGwQ" name="[1..*] cq_role" sourceNode="_R8g5YBN_Eeq6N7pvDrdGwQ" targetNode="_nRceUBN5Eeq6N7pvDrdGwQ">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_ceTdMhN_Eeq6N7pvDrdGwQ" name="[1..1] cq_role" sourceNode="_R8g5YBN_Eeq6N7pvDrdGwQ" targetNode="_nRceUBN5Eeq6N7pvDrdGwQ">
       <target xmi:type="ecore:EReference" href="archi.ecore#//NewM1/Connector.3/cq_role"/>
       <semanticElements xmi:type="ecore:EReference" href="archi.ecore#//NewM1/Connector.3/cq_role"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_P_d44BO2EeqbmdHOLxPs5w" description="_5wi_phO1EeqbmdHOLxPs5w" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
@@ -10230,7 +10230,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_dJUwIhN_Eeq6N7pvDrdGwQ" name="[1..*] sa_role" sourceNode="_Q-B34BN_Eeq6N7pvDrdGwQ" targetNode="_mToLMBN5Eeq6N7pvDrdGwQ">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_dJUwIhN_Eeq6N7pvDrdGwQ" name="[1..1] sa_role" sourceNode="_Q-B34BN_Eeq6N7pvDrdGwQ" targetNode="_mToLMBN5Eeq6N7pvDrdGwQ">
       <target xmi:type="ecore:EReference" href="archi.ecore#//NewM1/Connector.2/sa_role"/>
       <semanticElements xmi:type="ecore:EReference" href="archi.ecore#//NewM1/Connector.2/sa_role"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Pix8-BO2EeqbmdHOLxPs5w" description="_5wi_phO1EeqbmdHOLxPs5w" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
@@ -10241,7 +10241,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_dg_pVBN_Eeq6N7pvDrdGwQ" name="[1..*] db_role" sourceNode="_OCcQgBN_Eeq6N7pvDrdGwQ" targetNode="_iOwAgBN5Eeq6N7pvDrdGwQ">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_dg_pVBN_Eeq6N7pvDrdGwQ" name="[1..1] db_role" sourceNode="_OCcQgBN_Eeq6N7pvDrdGwQ" targetNode="_iOwAgBN5Eeq6N7pvDrdGwQ">
       <target xmi:type="ecore:EReference" href="archi.ecore#//NewM1/Connector.1/db_role"/>
       <semanticElements xmi:type="ecore:EReference" href="archi.ecore#//NewM1/Connector.1/db_role"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_PLpPZBO2EeqbmdHOLxPs5w" description="_5wi_phO1EeqbmdHOLxPs5w" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
@@ -10252,7 +10252,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_d7InkhN_Eeq6N7pvDrdGwQ" name="[1..*] sc_role" sourceNode="_NrESUBN_Eeq6N7pvDrdGwQ" targetNode="_hx0M4BN5Eeq6N7pvDrdGwQ">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_d7InkhN_Eeq6N7pvDrdGwQ" name="[1..1] sc_role" sourceNode="_NrESUBN_Eeq6N7pvDrdGwQ" targetNode="_hx0M4BN5Eeq6N7pvDrdGwQ">
       <target xmi:type="ecore:EReference" href="archi.ecore#//NewM1/Connector/sc_role"/>
       <semanticElements xmi:type="ecore:EReference" href="archi.ecore#//NewM1/Connector/sc_role"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_OwBqTBO2EeqbmdHOLxPs5w" description="_5wi_phO1EeqbmdHOLxPs5w" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
@@ -10263,7 +10263,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_ebF6GhN_Eeq6N7pvDrdGwQ" name="[1..*] qi_role" sourceNode="_HAQukBN8Eeq6N7pvDrdGwQ" targetNode="_YlBtMBN5Eeq6N7pvDrdGwQ">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_ebF6GhN_Eeq6N7pvDrdGwQ" name="[1..1] qi_role" sourceNode="_HAQukBN8Eeq6N7pvDrdGwQ" targetNode="_YlBtMBN5Eeq6N7pvDrdGwQ">
       <target xmi:type="ecore:EReference" href="archi.ecore#//NewM1/Se_to_Db_Connector/qi_role"/>
       <semanticElements xmi:type="ecore:EReference" href="archi.ecore#//NewM1/Se_to_Db_Connector/qi_role"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_OaF2pBO2EeqbmdHOLxPs5w" description="_5wi_phO1EeqbmdHOLxPs5w" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
@@ -10274,7 +10274,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_fOPOJhN_Eeq6N7pvDrdGwQ" name="[1..*] sm_role" sourceNode="_GrMdgBN8Eeq6N7pvDrdGwQ" targetNode="_VKjKYBN5Eeq6N7pvDrdGwQ">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_fOPOJhN_Eeq6N7pvDrdGwQ" name="[1..1] sm_role" sourceNode="_GrMdgBN8Eeq6N7pvDrdGwQ" targetNode="_VKjKYBN5Eeq6N7pvDrdGwQ">
       <target xmi:type="ecore:EReference" href="archi.ecore#//NewM1/Co_to_Se_Connector/sm_role"/>
       <semanticElements xmi:type="ecore:EReference" href="archi.ecore#//NewM1/Co_to_Se_Connector/sm_role"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_OECHAhO2EeqbmdHOLxPs5w" description="_5wi_phO1EeqbmdHOLxPs5w" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
@@ -10575,8 +10575,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_06f3hhOFEeq6N7pvDrdGwQ" name="[1..1] caller_role" sourceNode="_-vIKYBNxEeq6N7pvDrdGwQ" targetNode="_-vGVMBNxEeq6N7pvDrdGwQ">
-      <target xmi:type="ecore:EReference" href="archi.ecore#//NewM1/SendRequest_to_Caller_Atatchement/caller_role"/>
-      <semanticElements xmi:type="ecore:EReference" href="archi.ecore#//NewM1/SendRequest_to_Caller_Atatchement/caller_role"/>
+      <target xmi:type="ecore:EReference" href="archi.ecore#//NewM1/SendRequest_to_Caller_Attachement/caller_role"/>
+      <semanticElements xmi:type="ecore:EReference" href="archi.ecore#//NewM1/SendRequest_to_Caller_Attachement/caller_role"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_7WzL2BO1EeqbmdHOLxPs5w" description="_-vhzABNxEeq6N7pvDrdGwQ" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_7WzL2hO1EeqbmdHOLxPs5w" showIcon="false">
           <labelFormat>bold</labelFormat>
