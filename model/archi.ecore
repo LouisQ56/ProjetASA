@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="archi" nsURI="http://www.example.org/archi" nsPrefix="archi">
-  <eSubpackages name="M1">
+  <eSubpackages name="OutOfDateM1">
     <eClassifiers xsi:type="ecore:EClass" name="Client" eSuperTypes="#//M2/Component"/>
     <eClassifiers xsi:type="ecore:EClass" name="Server" eSuperTypes="#//M2/Component"/>
     <eClassifiers xsi:type="ecore:EClass" name="ClientSendRequest" eSuperTypes="#//M2/OutPort"/>
     <eClassifiers xsi:type="ecore:EClass" name="RPC" eSuperTypes="#//M2/Connector">
       <eStructuralFeatures xsi:type="ecore:EReference" name="called" upperBound="-1"
-          eType="#//M1/Called" containment="true"/>
+          eType="#//OutOfDateM1/Called" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="caller" upperBound="-1"
-          eType="#//M1/Caller" containment="true"/>
+          eType="#//OutOfDateM1/Caller" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Called" eSuperTypes="#//M2/InRole"/>
     <eClassifiers xsi:type="ecore:EClass" name="Caller" eSuperTypes="#//M2/OutRole"/>
     <eClassifiers xsi:type="ecore:EClass" name="RPCtoExternalSocket" eSuperTypes="#//M2/Binding">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="rpc" lowerBound="1" eType="#//M1/RPC"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rpc" lowerBound="1" eType="#//OutOfDateM1/RPC"
           containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ExternalSocket" eSuperTypes="#//M2/InPort"/>
     <eClassifiers xsi:type="ecore:EClass" name="Connection_Manager">
       <eStructuralFeatures xsi:type="ecore:EReference" name="externalsocket" lowerBound="1"
-          eType="#//M1/ExternalSocket" containment="true"/>
+          eType="#//OutOfDateM1/ExternalSocket" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="db_query" lowerBound="1"
-          eType="#//M1/DB_Query" containment="true"/>
+          eType="#//OutOfDateM1/DB_Query" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="security_check" lowerBound="1"
-          eType="#//M1/security_check" containment="true"/>
+          eType="#//OutOfDateM1/security_check" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="DB_Query">
       <eStructuralFeatures xsi:type="ecore:EReference" name="port" lowerBound="1"
@@ -35,9 +35,9 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Security_manager">
       <eStructuralFeatures xsi:type="ecore:EReference" name="security_auth" lowerBound="1"
-          eType="#//M1/security_auth" containment="true"/>
+          eType="#//OutOfDateM1/security_auth" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="check_query" lowerBound="1"
-          eType="#//M1/check_query" containment="true"/>
+          eType="#//OutOfDateM1/check_query" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="security_auth">
       <eStructuralFeatures xsi:type="ecore:EReference" name="port" eType="#//M2/Port"/>
@@ -47,9 +47,9 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Database">
       <eStructuralFeatures xsi:type="ecore:EReference" name="query_interrogation"
-          lowerBound="1" eType="#//M1/query_interrogation" containment="true"/>
+          lowerBound="1" eType="#//OutOfDateM1/query_interrogation" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="security_management"
-          lowerBound="1" eType="#//M1/security_management" containment="true"/>
+          lowerBound="1" eType="#//OutOfDateM1/security_management" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="security_management">
       <eStructuralFeatures xsi:type="ecore:EReference" name="port" eType="#//M2/Port"/>
@@ -60,16 +60,16 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="CManagerToDatabase">
       <eStructuralFeatures xsi:type="ecore:EReference" name="rolequery_interrogation"
-          lowerBound="1" eType="#//M1/RoleQuery_Interrogation" containment="true"/>
+          lowerBound="1" eType="#//OutOfDateM1/RoleQuery_Interrogation" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="roledb_query" lowerBound="1"
-          eType="#//M1/RoleDB_Query" containment="true"/>
+          eType="#//OutOfDateM1/RoleDB_Query" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="connector" eType="#//M2/Connector"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="AttachQuery_Interrogation">
       <eStructuralFeatures xsi:type="ecore:EReference" name="rolequery_interrogation"
-          lowerBound="1" eType="#//M1/RoleQuery_Interrogation"/>
+          lowerBound="1" eType="#//OutOfDateM1/RoleQuery_Interrogation"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="query_interrogation"
-          lowerBound="1" eType="#//M1/query_interrogation"/>
+          lowerBound="1" eType="#//OutOfDateM1/query_interrogation"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="RoleQuery_Interrogation">
       <eStructuralFeatures xsi:type="ecore:EReference" name="role" eType="#//M2/Role"/>
@@ -79,16 +79,16 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="AttachDB_Query">
       <eStructuralFeatures xsi:type="ecore:EReference" name="roledb_query" lowerBound="1"
-          eType="#//M1/RoleDB_Query"/>
+          eType="#//OutOfDateM1/RoleDB_Query"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="db_query" lowerBound="1"
-          eType="#//M1/DB_Query"/>
+          eType="#//OutOfDateM1/DB_Query"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="CManagerToSManager">
       <eStructuralFeatures xsi:type="ecore:EReference" name="connector" eType="#//M2/Connector"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="rolesecurity_auth" upperBound="-1"
-          eType="#//M1/RoleSecurity_auth" containment="true"/>
+          eType="#//OutOfDateM1/RoleSecurity_auth" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="rolesecurity_check" upperBound="-1"
-          eType="#//M1/RoleSecurity_Check" containment="true"/>
+          eType="#//OutOfDateM1/RoleSecurity_Check" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="RoleSecurity_Check">
       <eStructuralFeatures xsi:type="ecore:EReference" name="role" eType="#//M2/Role"/>
@@ -97,36 +97,36 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="role" eType="#//M2/Role"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="AttachSecurity_auth">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="security_auth" eType="#//M1/security_auth"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="rolesecurity_auth" eType="#//M1/RoleSecurity_auth"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="security_auth" eType="#//OutOfDateM1/security_auth"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rolesecurity_auth" eType="#//OutOfDateM1/RoleSecurity_auth"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="AttachSecurity_check">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="rolesecurity_check" eType="#//M1/RoleSecurity_Check"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="security_check" eType="#//M1/security_check"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rolesecurity_check" eType="#//OutOfDateM1/RoleSecurity_Check"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="security_check" eType="#//OutOfDateM1/security_check"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SManagerToDatabase">
       <eStructuralFeatures xsi:type="ecore:EReference" name="connector" lowerBound="1"
           eType="#//M2/Connector"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="rolecheck_query" upperBound="-1"
-          eType="#//M1/RoleCheck_Query" containment="true"/>
+          eType="#//OutOfDateM1/RoleCheck_Query" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="rolesecurity_management"
-          upperBound="-1" eType="#//M1/RoleSecurity_management" containment="true"/>
+          upperBound="-1" eType="#//OutOfDateM1/RoleSecurity_management" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="RoleCheck_Query">
       <eStructuralFeatures xsi:type="ecore:EReference" name="role" eType="#//M2/Role"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="AttachRoleQuery">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="check_query" eType="#//M1/check_query"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="rolecheck_query" eType="#//M1/RoleCheck_Query"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="check_query" eType="#//OutOfDateM1/check_query"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rolecheck_query" eType="#//OutOfDateM1/RoleCheck_Query"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="RoleSecurity_management">
       <eStructuralFeatures xsi:type="ecore:EReference" name="role" eType="#//M2/Role"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="AttachSecurity_management">
       <eStructuralFeatures xsi:type="ecore:EReference" name="rolesecurity_management"
-          eType="#//M1/RoleSecurity_management"/>
+          eType="#//OutOfDateM1/RoleSecurity_management"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="security_management"
-          eType="#//M1/security_management"/>
+          eType="#//OutOfDateM1/security_management"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="M2">
@@ -220,11 +220,11 @@
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="otherM1">
-    <eClassifiers xsi:type="ecore:EClass" name="Client" eSuperTypes="#//M1/Client">
+    <eClassifiers xsi:type="ecore:EClass" name="Client" eSuperTypes="#//OutOfDateM1/Client">
       <eStructuralFeatures xsi:type="ecore:EReference" name="sendrequest" upperBound="-1"
           eType="#//otherM1/SendRequest_Port" containment="true"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Server" eSuperTypes="#//M1/Server">
+    <eClassifiers xsi:type="ecore:EClass" name="Server" eSuperTypes="#//OutOfDateM1/Server">
       <eStructuralFeatures xsi:type="ecore:EReference" name="receiverequest" upperBound="-1"
           eType="#//otherM1/ReceiveRequest_Port" containment="true"/>
     </eClassifiers>
